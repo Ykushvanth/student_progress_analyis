@@ -1,0 +1,477 @@
+.iqac-management {
+  padding: 20px;
+}
+
+.management-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.management-tabs .tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.management-tabs .tab:hover {
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.management-tabs .tab.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.message {
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.message-success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.message-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+.management-section {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  margin: 0 0 8px 0;
+  color: #1f2937;
+  font-size: 24px;
+}
+
+.section-description {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.create-form {
+  background: #f9fafb;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  border: 1px solid #e5e7eb;
+}
+
+.create-form h3 {
+  margin: 0 0 20px 0;
+  color: #1f2937;
+  font-size: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #374151;
+  font-size: 14px;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.btn-primary:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  padding: 8px 16px;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #b91c1c;
+}
+
+.btn-danger:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.assignments-list {
+  margin-top: 40px;
+}
+
+.assignments-list h3 {
+  margin: 0 0 20px 0;
+  color: #1f2937;
+  font-size: 18px;
+}
+
+.table-container {
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.data-table thead {
+  background-color: #f9fafb;
+}
+
+.data-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #1f2937;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.data-table small {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Filter Section */
+.filter-section {
+  background: #f0f9ff;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #bae6fd;
+}
+
+.filter-section h3 {
+  margin: 0 0 16px 0;
+  color: #0c4a6e;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  background-color: #64748b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 16px;
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+}
+
+/* Faculty List Section */
+.faculty-list-section {
+  background: #fefce8;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #fde047;
+}
+
+.faculty-list-section h3 {
+  margin: 0 0 8px 0;
+  color: #713f12;
+  font-size: 18px;
+}
+
+.faculty-list-section .section-description {
+  margin: 0 0 20px 0;
+  color: #854d0e;
+  font-size: 14px;
+}
+
+.faculty-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (max-width: 1024px) {
+  .faculty-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faculty-card {
+  background: white;
+  border: 1px solid #fde047;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.faculty-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: #facc15;
+}
+
+.faculty-info {
+  flex: 1;
+}
+
+.faculty-info h4 {
+  margin: 0 0 8px 0;
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.faculty-id {
+  margin: 4px 0;
+  color: #0c4a6e;
+  font-size: 14px;
+}
+
+.faculty-id strong {
+  font-weight: 700;
+  color: #0369a1;
+}
+
+.faculty-email {
+  margin: 4px 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.faculty-dept {
+  margin: 8px 0 0 0;
+  color: #059669;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.btn-assign {
+  padding: 8px 16px;
+  background-color: #0891b2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.btn-assign:hover {
+  background-color: #0e7490;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .faculty-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .faculty-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-assign {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}
+
+/* Additional spacing and alignment improvements */
+.filter-section .form-grid {
+  align-items: end;
+}
+
+.create-form .form-grid {
+  align-items: end;
+}
+
+.faculty-list-section {
+  margin-top: 30px;
+}
+
+.assignments-list {
+  margin-top: 50px;
+  clear: both;
+}
+
+/* Ensure all buttons have consistent width in forms */
+.create-form .btn-primary,
+.filter-section .btn-secondary {
+  display: inline-block;
+  text-align: center;
+}
+
+/* Improve form field consistency */
+.form-group select,
+.form-group input {
+  height: 42px;
+  width: 100%;
+}
+
+/* Better visual hierarchy */
+.section-header h2 {
+  font-weight: 600;
+}
+
+.create-form h3,
+.faculty-list-section h3,
+.assignments-list h3 {
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+/* Status badges for courses */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-active {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.badge-inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+/* Course management specific styles */
+.create-form input[type="number"] {
+  appearance: textfield;
+}
+
+.create-form input[type="number"]::-webkit-inner-spin-button,
+.create-form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
